@@ -1,0 +1,13 @@
+//洛谷入门题——洛谷团队系统
+import java.util.Scanner;
+import java.lang.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        //输入要配置题目的数量n
+        int n = scan.nextInt();
+        //用三目运算比较本地配置用时和洛谷团队系统配置用时
+        System.out.println(5*n>3*n+11 ? "Luogu" : "Local");
+    }
+}
