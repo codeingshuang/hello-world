@@ -1,0 +1,20 @@
+//计算某个月份有多少天的代码。
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        //输入年份、月份
+        int year = scan.nextInt();
+        int month = scan.nextInt();
+        //定义一个数组，存储的是平年每个月的天数
+        int[] array = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; 
+        //判断输入的年份是否为闰年
+        //闰年判断：能被4整除且不被100整除，或者能被400整除
+        if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+            //如果输入的年份为闰年，则这年的2月份有29天，所以将array[2]赋值为29
+            array[2] = 29;
+        }
+        //输出年份对应数组中的月份天数
+        System.out.println(array[month]);
+    }
+}
