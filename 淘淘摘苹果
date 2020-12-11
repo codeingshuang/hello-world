@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        //定义一个数组，用来存储10个苹果到地面的高度
+        int[] array = new int[10];
+        int count = 0;
+        for(int i = 0; i < 10; i++){
+            //for循环输入每一个苹果到地面的高度，存入数组array中
+            array[i] = scan.nextInt();
+        }
+        //输入淘淘都能够到的高度
+        int n = scan.nextInt();
+        for(int i = 0; i < 10; i++){
+            //如果淘淘能够到的高度加上凳子的高度大于等于苹果到第地面的高度，那么淘淘就能摘到这个苹果
+            if(n + 30 >= array[i]){
+                //count记录淘淘能摘到苹果的个数
+                count ++;
+            }
+        }
+        //输出淘淘能摘到苹果个数
+        System.out.println(count);
+    }
+}
