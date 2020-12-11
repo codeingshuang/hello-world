@@ -1,4 +1,4 @@
-//计算某个月份有多少天的代码。
+//洛谷入门题——某年某月有多少天
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
